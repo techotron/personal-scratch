@@ -1,16 +1,13 @@
-﻿#[decimal]$increment = 0.00000000000000001
-for ($i = 0; $i -le 9999999; $i ++) {
+﻿for ($i = 0; $i -le 9999; $i ++) {
 
     [decimal]$keg = 10
  
     [decimal]$float = "2.$i"
     [decimal]$jug = $float
-    #[decimal]$jug = $i
-    #$jug
 
     write-host "left with" (($keg - $jug) - ((($keg - $jug) / $keg) * $jug)) "gallon beer and" ($jug + ($jug - ($jug - ((($keg - $jug) / $keg) * $jug)))) "gallon water with a jug size of $jug"
 
-    if (((($keg - $jug) - ((($keg - $jug) / $keg) * $jug))).ToString() -like "5.000000*") { #($jug + ($jug - ($jug - ((($keg - $jug) / $keg) * $jug))))) {
+    if (((($keg - $jug) - ((($keg - $jug) / $keg) * $jug))).ToString() -like "5.0000*") { 
 
         write-host "start with $keg gallons"
         write-host "take away $jug gallon beer"
