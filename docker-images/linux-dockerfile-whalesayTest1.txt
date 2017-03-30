@@ -1,0 +1,9 @@
+FROM docker/whalesay:latest
+
+RUN \
+    apt-get -y update && \
+    apt-get install -y fortunes && \
+    mkdir /test && \
+    echo "this is a test - is it in the image?" > /test/test.txt
+
+CMD /usr/games/fortune -a | cowsay

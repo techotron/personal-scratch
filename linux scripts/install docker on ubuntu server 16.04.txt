@@ -28,3 +28,6 @@ sudo apt-get install docker-ce
 
 # Verify that Docker is install correctly by running the hello-world image:
 sudo docker run hello-world
+
+# The following will download the latest "ubuntu" image from a public docker registry and run the /bin/bash in an interactive mode
+docker run -i -t ubuntu /bin/bash

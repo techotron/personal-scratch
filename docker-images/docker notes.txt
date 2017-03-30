@@ -1,0 +1,6 @@
+The RUN section of a docker file is where you can add commands which will build the container as you would a server.
+
+Any changes to a container will be lost when it stops running. To save the changes, you have to commit them to the image.
+To do this, run the docker commit command:
+    sudo docker commit [containerId] [repository:tag]
+eg: sudo docker commit f267da0cd858 docker-whale:latest
